@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Faz o corpo ocupar toda a altura da tela */
+    margin: 0; /* Remove margens padrão */
+    background-color: white;
+    width:100%; /* Cor de fundo suave para melhorar a visualização */
+}
+
+.card {
+    width: 90%; /* O card ocupa 80% da largura da tela */
+    max-width: 800px; /* Limite máximo de largura (opcional) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+    position: relative; /* Para que a legenda se posicione corretamente */
+    background-color: #1f1919; /* Fundo branco para o card */
+    border-radius: 15px; /* Cantos mais arredondados */
+    overflow: hidden; /* Para evitar que elementos internos ultrapassem os limites do card */
+}
+
+.card-body {
+    height: 550px; /* Altura do corpo do card */
+    padding: 20px; /* Espaçamento interno para o conteúdo do card */
+    overflow: auto; /* Adiciona rolagem se o conteúdo exceder a altura */
+}
+
+.legend {
+    position: absolute; /* Para que a legenda fique posicionada em relação ao card */
+    top: 20px; /* Ajuste conforme necessário */
+    right: 20px; /* Ajuste conforme necessário */
+    background: white; /* Fundo branco */
+    border: 1px solid #ccc; /* Borda cinza */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Cantos arredondados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra */
+    z-index: 10; /* Para que fique acima de outros elementos */
+}
+
+.legend h3 {
+    margin: 0 0 10px; /* Espaçamento do título da legenda */
+    font-size: 1.2em; /* Tamanho da fonte do título */
+}
+
+.legend ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding padrão */
+    margin: 0; /* Remove a margem padrão */
+}
+
+.legend li {
+    display: flex; /* Para alinhar o símbolo e o texto na mesma linha */
+    align-items: center; /* Alinha verticalmente o texto com o símbolo */
+    margin-bottom: 5px; /* Espaçamento entre os itens da legenda */
+}
+
+.legend span {
+    display: inline-block; /* Mantém o símbolo na mesma linha */
+    width: 15px; /* Largura do símbolo */
+    height: 15px; /* Altura do símbolo */
+    border-radius: 50%; /* Faz o símbolo ser redondo */
+    margin-right: 5px; /* Espaçamento à direita do símbolo */
+}
