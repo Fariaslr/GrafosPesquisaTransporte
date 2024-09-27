@@ -7,7 +7,6 @@
  var originalNodes;
  var network;
  var container;
-
  var filter = {
      item: '',
      property: '',
@@ -20,202 +19,207 @@
      var container = document.getElementById('mynetwork');
 
      nodes = new vis.DataSet([{
-        "color": "lightblue",
-        "font": {
-            "color": "white" // alterado para white
-        },
-        "id": "Cama\u00e7ari (Sede)",
-        "label": "Cama\u00e7ari (Sede)",
-        "shape": "dot",
-        "size": 38,
-        "title": "Cama\u00e7ari (Sede)"
-    }, {
-        "color": "lightgreen",
-        "font": {
-            "color": "white" // mantido como white
-        },
-        "id": "Campus IFBA Cama\u00e7ari",
-        "label": "Campus IFBA Cama\u00e7ari",
-        "shape": "dot",
-        "size": 47,
-        "title": "Campus IFBA Cama\u00e7ari"
-    }, {
-        "color": "lightblue",
-        "font": {
-            "color": "white" // mantido como white
-        },
-        "id": "Salvador",
-        "label": "Salvador",
-        "shape": "dot",
-        "size": 26,
-        "title": "Salvador"
-    }, {
-        "color": "lightblue",
-        "font": {
-            "color": "white" // alterado para white
-        },
-        "id": "Mata de S\u00e3o Jo\u00e3o",
-        "label": "Mata de S\u00e3o Jo\u00e3o",
-        "shape": "dot",
-        "size": 15,
-        "title": "Mata de S\u00e3o Jo\u00e3o"
-    }, {
-        "color": "lightblue",
-        "font": {
-            "color": "white" // alterado para white
-        },
-        "id": "Dias D\u0027\u00c1vila",
-        "label": "Dias D\u0027\u00c1vila",
-        "shape": "dot",
-        "size": 15,
-        "title": "Dias D\u0027\u00c1vila"
-    }, {
-        "color": "lightblue",
-        "font": {
-            "color": "white" // alterado para white
-        },
-        "id": "Abrantes",
-        "label": "Abrantes",
-        "shape": "dot",
-        "size": 15,
-        "title": "Abrantes"
-    }, {
-        "color": "lightblue",
-        "font": {
-            "color": "white" // alterado para white
-        },
-        "id": "Parafuso",
-        "label": "Parafuso",
-        "shape": "dot",
-        "size": 15,
-        "title": "Parafuso"
-    }, {
-        "color": "lightblue",
-        "font": {
-            "color": "white" // alterado para white
-        },
-        "id": "Arembepe",
-        "label": "Arembepe",
-        "shape": "dot",
-        "size": 15,
-        "title": "Arembepe"
-    }, {
-        "color": "lightblue",
-        "font": {
-            "color": "white" // alterado para white
-        },
-        "id": "Sim\u00f5es Filho",
-        "label": "Sim\u00f5es Filho",
-        "shape": "dot",
-        "size": 15,
-        "title": "Sim\u00f5es Filho"
-    }, {
-        "color": "lightblue",
-        "font": {
-            "color": "white" // alterado para white
-        },
-        "id": "Pojuca",
-        "label": "Pojuca",
-        "shape": "dot",
-        "size": 15,
-        "title": "Pojuca"
-    }, {
-        "color": "orange",
-        "font": {
-            "color": "white" // alterado para white
-        },
-        "id": "Transporte p\u00fablico",
-        "label": "Transporte p\u00fablico",
-        "shape": "dot",
-        "size": 58,
-        "title": "Transporte p\u00fablico"
-    }, {
-        "color": "orange",
-        "font": {
-            "color": "white" // alterado para white
-        },
-        "id": "Transporte por aplicativo",
-        "label": "Transporte por aplicativo",
-        "shape": "dot",
-        "size": 20,
-        "title": "Transporte por aplicativo"
-    }, {
-        "color": "orange",
-        "font": {
-            "color": "white" // alterado para white
-        },
-        "id": "Ve\u00edculo pr\u00f3prio",
-        "label": "Ve\u00edculo pr\u00f3prio",
-        "shape": "dot",
-        "size": 15,
-        "title": "Ve\u00edculo pr\u00f3prio"
-    }, {
-        "color": "orange",
-        "font": {
-            "color": "white" // alterado para white
-        },
-        "id": "Transporte universit\u00e1rio",
-        "label": "Transporte universit\u00e1rio",
-        "shape": "dot",
-        "size": 15,
-        "title": "Transporte universit\u00e1rio"
-    }, {
-        "color": "orange",
-        "font": {
-            "color": "white" // alterado para white
-        },
-        "id": "Pego mais de duas op\u00e7\u00f5es; 2 onibus e um moto uber.",
-        "label": "Pego mais de duas op\u00e7\u00f5es; 2 onibus e um moto uber.",
-        "shape": "dot",
-        "size": 15,
-        "title": "Pego mais de duas op\u00e7\u00f5es; 2 onibus e um moto uber."
-    }, {
-        "color": "orange",
-        "font": {
-            "color": "white" // alterado para white
-        },
-        "id": "Bicicleta",
-        "label": "Bicicleta",
-        "shape": "dot",
-        "size": 15,
-        "title": "Bicicleta"
-    }, {
-        "color": "orange",
-        "font": {
-            "color": "white" // alterado para white
-        },
-        "id": "Carona de amigou ou professores",
-        "label": "Carona de amigou ou professores",
-        "shape": "dot",
-        "size": 15,
-        "title": "Carona de amigou ou professores"
-    }, {
-        "color": "orange",
-        "font": {
-            "color": "white" // alterado para white
-        },
-        "id": "Caminhando",
-        "label": "Caminhando",
-        "shape": "dot",
-        "size": 15,
-        "title": "Caminhando"
-    }, {
-        "color": "brown",
-        "font": {
-            "color": "white" // alterado para white
-        },
-        "id": "Sim",
-        "label": "Sim",
-        "shape": "dot",
-        "size": 36,
-        "title": "Sim"
-    }, {
-        "color": "SlateBlue",
-        "font": {
-            "color": "white" // alterado para white
-        },
-        // Adicione outros nós aqui, se necessário
-    }]);
+         "color": "lightblue",
+         "font": {
+             "color": "black"
+         },
+         "id": "Cama\u00e7ari (Sede)",
+         "label": "Cama\u00e7ari (Sede)",
+         "shape": "dot",
+         "size": 38,
+         "title": "Cama\u00e7ari (Sede)"
+     }, {
+         "color": "lightgreen",
+         "font": {
+             "color": "black"
+         },
+         "id": "Campus IFBA Cama\u00e7ari",
+         "label": "Campus IFBA Cama\u00e7ari",
+         "shape": "dot",
+         "size": 94,
+         "title": "Campus IFBA Cama\u00e7ari"
+     }, {
+         "color": "lightblue",
+         "font": {
+             "color": "black"
+         },
+         "id": "Salvador",
+         "label": "Salvador",
+         "shape": "dot",
+         "size": 26,
+         "title": "Salvador"
+     }, {
+         "color": "lightblue",
+         "font": {
+             "color": "black"
+         },
+         "id": "Mata de S\u00e3o Jo\u00e3o",
+         "label": "Mata de S\u00e3o Jo\u00e3o",
+         "shape": "dot",
+         "size": 15,
+         "title": "Mata de S\u00e3o Jo\u00e3o"
+     }, {
+         "color": "lightblue",
+         "font": {
+             "color": "black"
+         },
+         "id": "Dias D\u0027\u00c1vila",
+         "label": "Dias D\u0027\u00c1vila",
+         "shape": "dot",
+         "size": 15,
+         "title": "Dias D\u0027\u00c1vila"
+     }, {
+         "color": "lightblue",
+         "font": {
+             "color": "black"
+         },
+         "id": "Abrantes",
+         "label": "Abrantes",
+         "shape": "dot",
+         "size": 15,
+         "title": "Abrantes"
+     }, {
+         "color": "lightblue",
+         "font": {
+             "color": "black"
+         },
+         "id": "Parafuso",
+         "label": "Parafuso",
+         "shape": "dot",
+         "size": 15,
+         "title": "Parafuso"
+     }, {
+         "color": "lightblue",
+         "font": {
+             "color": "black"
+         },
+         "id": "Arembepe",
+         "label": "Arembepe",
+         "shape": "dot",
+         "size": 15,
+         "title": "Arembepe"
+     }, {
+         "color": "lightblue",
+         "font": {
+             "color": "black"
+         },
+         "id": "Sim\u00f5es Filho",
+         "label": "Sim\u00f5es Filho",
+         "shape": "dot",
+         "size": 15,
+         "title": "Sim\u00f5es Filho"
+     }, {
+         "color": "lightblue",
+         "font": {
+             "color": "black"
+         },
+         "id": "Pojuca",
+         "label": "Pojuca",
+         "shape": "dot",
+         "size": 15,
+         "title": "Pojuca"
+     }, {
+         "color": "orange",
+         "font": {
+             "color": "black"
+         },
+         "id": "Transporte p\u00fablico",
+         "label": "Transporte p\u00fablico",
+         "shape": "dot",
+         "size": 58,
+         "title": "Transporte p\u00fablico"
+     }, {
+         "color": "orange",
+         "font": {
+             "color": "black"
+         },
+         "id": "Transporte por aplicativo",
+         "label": "Transporte por aplicativo",
+         "shape": "dot",
+         "size": 20,
+         "title": "Transporte por aplicativo"
+     }, {
+         "color": "orange",
+         "font": {
+             "color": "black"
+         },
+         "id": "Ve\u00edculo pr\u00f3prio",
+         "label": "Ve\u00edculo pr\u00f3prio",
+         "shape": "dot",
+         "size": 15,
+         "title": "Ve\u00edculo pr\u00f3prio"
+     }, {
+         "color": "orange",
+         "font": {
+             "color": "black"
+         },
+         "id": "Transporte universit\u00e1rio",
+         "label": "Transporte universit\u00e1rio",
+         "shape": "dot",
+         "size": 15,
+         "title": "Transporte universit\u00e1rio"
+     }, {
+         "color": "orange",
+         "font": {
+             "color": "black"
+         },
+         "id": "Pego mais de duas op\u00e7\u00f5es; 2 onibus e um moto uber.",
+         "label": "Pego mais de duas op\u00e7\u00f5es; 2 onibus e um moto uber.",
+         "shape": "dot",
+         "size": 15,
+         "title": "Pego mais de duas op\u00e7\u00f5es; 2 onibus e um moto uber."
+     }, {
+         "color": "orange",
+         "font": {
+             "color": "black"
+         },
+         "id": "Bicicleta",
+         "label": "Bicicleta",
+         "shape": "dot",
+         "size": 15,
+         "title": "Bicicleta"
+     }, {
+         "color": "orange",
+         "font": {
+             "color": "black"
+         },
+         "id": "Carona de amigou ou professores",
+         "label": "Carona de amigou ou professores",
+         "shape": "dot",
+         "size": 15,
+         "title": "Carona de amigou ou professores"
+     }, {
+         "color": "orange",
+         "font": {
+             "color": "black"
+         },
+         "id": "Caminhando",
+         "label": "Caminhando",
+         "shape": "dot",
+         "size": 15,
+         "title": "Caminhando"
+     }, {
+         "color": "brown",
+         "font": {
+             "color": "black"
+         },
+         "id": "Sim",
+         "label": "Sim",
+         "shape": "dot",
+         "size": 36,
+         "title": "Sim"
+     }, {
+         "color": "SlateBlue",
+         "font": {
+             "color": "black"
+         },
+         "id": "N\u00e3o",
+         "label": "N\u00e3o",
+         "shape": "dot",
+         "size": 58,
+         "title": "N\u00e3o"
+     }]);
+
      edges = new vis.DataSet([{
          "from": "Cama\u00e7ari (Sede)",
          "title": "Frequ\u00eancia: 19",
@@ -422,6 +426,7 @@
          "to": "Dias D\u0027\u00c1vila",
          "value": 3
      }]);
+
 
      nodeColors = {};
      allNodes = nodes.get({

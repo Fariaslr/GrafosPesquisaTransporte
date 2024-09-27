@@ -1,27 +1,27 @@
 body {
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    height: 100vh; /* Faz o corpo ocupar toda a altura da tela */
-    margin: 0; /* Remove margens padrão */
-    background-color: white;
-    width:100%; /* Cor de fundo suave para melhorar a visualização */
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0; 
+    background-color: #0e2c33 !important;
+    width: 100%; 
 }
 
 .card {
-    width: 90%; /* O card ocupa 80% da largura da tela */
-    max-width: 800px; /* Limite máximo de largura (opcional) */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
-    position: relative; /* Para que a legenda se posicione corretamente */
-    background-color: #1f1919; /* Fundo branco para o card */
-    border-radius: 15px; /* Cantos mais arredondados */
-    overflow: hidden; /* Para evitar que elementos internos ultrapassem os limites do card */
+    width: 90%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative; 
+    background-color: #1f1919; 
+    border-radius: 15px; 
+    overflow: hidden; 
 }
 
 .card-body {
-    height: 550px; /* Altura do corpo do card */
-    padding: 20px; /* Espaçamento interno para o conteúdo do card */
-    overflow: auto; /* Adiciona rolagem se o conteúdo exceder a altura */
+    height: 90vh; 
+    padding: 20px; 
+    overflow: auto; 
+    background-color: rgb(253, 253, 253);
 }
 
 .legend {
